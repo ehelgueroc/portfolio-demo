@@ -4,6 +4,7 @@ import Layout from "../components/Layout"
 import { header, btn } from "../styles/home.module.css"
 
 export default function Home() {
+
   return (
     <Layout>
       <section className={header}>
