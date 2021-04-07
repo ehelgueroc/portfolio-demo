@@ -1,8 +1,8 @@
 ---
-title: The Dojo Coffee House
+title: Workshop Infographics
 stack: HTML & CSS
-slug: the-dojo-coffee-house
-date: 2021-03-12T00:00:00+00:00
+slug: workshop-infographics
+date: 2019-04-14T00:00:00+00:00
 ---
 
 **Lorem ipsum dolor sit amet**, consectetur adipisicing elit. Id nostrum nam dicta nihil numquam illo error! Quia natus consequuntur provident delectus. Quas dolore quam debitis mollitia quod recusandae provident cumque. Id nostrum nam dicta nihil numquam illo error! Quia natus consequuntur provident delectus. Quas dolore quam debitis mollitia quod recusandae provident cumque.

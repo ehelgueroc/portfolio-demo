@@ -7,13 +7,7 @@
 module.exports = {
   /* Your site config here */
   plugins: [
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `notes`,
-        path: `${__dirname}/src/notes/`,
-      },
-    },
+    'gatsby-transformer-remark',`gatsby-transformer-sharp`, `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -21,10 +15,18 @@ module.exports = {
         path: `${__dirname}/src/projects/`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
+      },
+    },
   ],
   siteMetadata: {
     title: "Portfolio demo",
     description: "web dev portfolio",
-    copyright: "2021"
+    copyright: "2021",
+    contact: "me@webdeveloper.com"
   }
 }
