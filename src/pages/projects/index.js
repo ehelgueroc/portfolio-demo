@@ -2,8 +2,10 @@ import { graphql, Link } from 'gatsby'
 import React from 'react'
 import Layout from "../../components/Layout"
 import { portfolio, projects } from "../../styles/projects.module.css"
+import Img from 'gatsby-image'
 
 export default function Projects({ data }) {
+    
     const projectsData = data.projects.nodes
     const contact = data.contact.siteMetadata.contact
 
@@ -13,9 +15,10 @@ export default function Projects({ data }) {
             <h2>Portfolio</h2>
             <h3>Projects & Websites I've created</h3>
             <div className={projects}>
-                { projectsData.map(project => (
+                { projectsData.map(project =>  (
                     <Link to={"/projects/"+project.frontmatter.slug} key={project.id}>
                         <div>
+                            <Img fluid={project.frontmatter.thumb.childImageSharp.fluid} />
                             <h3>{project.frontmatter.title}</h3>
                             <p>{project.frontmatter.stack}</p>
                         </div>
@@ -37,14 +40,21 @@ query MyQuery {
           title
           slug
           date
+          thumb {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
         id
       }
-    },
-    contact: site {
-          siteMetadata {
-              contact
-          }
     }
-  }
+    contact: site {
+      siteMetadata {
+        contact
+      }
+    }
+  }  
 `
